@@ -74,3 +74,10 @@ body{
     cursor: pointer;
     color: #e74c3c;
 }
+i {
+    cursor: pointer;
+}
+.commentButton
+{
+    margin: 5px;
+}

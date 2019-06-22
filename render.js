@@ -12,10 +12,14 @@ function Renderer()
             $('#posts').append(postBox)
             for (let comment of post.comments)
             {
-                const commentBox = (`<div class='comments' id='${comment.id}'> ${comment.text}</div>`)
-                $(`#${post.id}`).append(commentBox)
-            }
-            $(`#${post.id}`).append("<button class='delete' >delete</button>")
+                const deleteComment = (`<i class="far fa-trash-alt" style="color:grey"></i>`)
+                const commentBox = (`<span class='comments' id='${comment.id}'> ${comment.text}</span><br>`)
+                $(`#${post.id}`).append(deleteComment+commentBox)
+                
+            }   
+            $(`#${post.id}`).append(`<input class="input" type="text" placeholder="What's on your mind?">`)
+            $(`#${post.id}`).append(`<button class="commentButton">Add Comment</button>`)
+            $(`#${post.id}`).append('<br><br><i class="fas fa-trash-alt fa-2x" style="color:#eb4d4b" style="font-size:5x"></i>')
         }        
     }
 
